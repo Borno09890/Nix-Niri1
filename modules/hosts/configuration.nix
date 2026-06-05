@@ -12,6 +12,7 @@
     imports = [
       self.nixosModules.hardware
       self.nixModules.niri
+      inputs.walker.nixosModules.default
     ];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -33,14 +34,20 @@
       ];
     };
     environment.systemPackages = with pkgs; [
-      vim
+      neovim
       wget
+      vscodium-fhs
+      brave
+      walker
+      elephant
     ];
     programs.mtr.enable = true;
     programs.gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
+    services.elephant.enable = true;
+    programs.walker.enable = true;
     services.openssh.enable = true;
     system.stateVersion = "26.05";
   };
