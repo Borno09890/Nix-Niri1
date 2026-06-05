@@ -12,7 +12,6 @@
     imports = [
       self.nixosModules.hardware
       self.nixModules.niri
-      inputs.walker.nixosModules.default
     ];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -47,7 +46,6 @@
       enableSSHSupport = true;
     };
     services.elephant.enable = true;
-    programs.walker.enable = true;
     services.openssh.enable = true;
     system.stateVersion = "26.05";
   };
