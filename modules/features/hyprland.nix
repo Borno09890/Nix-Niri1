@@ -20,7 +20,7 @@
     self',
     ...
   }: {
-    packages.myHyprlans = inputs.wrapper-modules.wrappers.hyprland.wrap {
+    packages.myHyprlands = inputs.wrapper-modules.wrappers.hyprland.wrap {
       inherit pkgs;
       settings = {
         spawn-at-startup = [
