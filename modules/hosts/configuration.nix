@@ -11,7 +11,7 @@
   }: {
     imports = [
       self.nixosModules.hardware
-      self.nixosModules.hyprland
+      self.nixosModules.niri
     ];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
